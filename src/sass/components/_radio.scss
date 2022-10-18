@@ -1,0 +1,151 @@
+.radio {
+    &--active {
+        & .radio-controls {
+            display: flex;
+        }
+        & .radio-btn {
+            &__icon {
+                &--pause {
+                    display: none;
+                }
+                &--play {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-item &-label {
+        display: none;
+    }
+    
+    &--live &-label {
+        display: block;
+    }
+
+    &--live &-cover-inner {
+        @include config-border(100%,3px, solid, $red);
+    }
+
+    &-cover-inner, &-cover__img, &-controls {
+        position: absolute;
+        top: 0;
+    }
+
+    &-cover {
+        padding-top: 100%;
+        position: relative;
+
+        &-inner {
+            @include size;
+            @include config-border(100%,3px, solid);
+            overflow: hidden;
+
+        }
+
+        &-inner:hover &__img {
+            transform: scale(1.1);
+        }
+
+        &-inner:hover .radio-controls {
+            display: flex
+        }
+
+        &__img {
+            @include size;
+            @include transition(300ms);
+        }
+    }
+
+    &-controls {
+        @include size;
+        background-color: $black-transparent-4;
+
+        display: none;
+        cursor: pointer;
+    }
+
+    &-btn {
+        @include size(43px);
+        @include text(22px,$white,40px);
+        @include flex-custom;
+        
+        @include config-border;
+        background: none;
+
+        margin: auto;
+        cursor: pointer;
+
+        &__icon {
+            &--pause {
+                display: block;
+            }
+            &--play {
+                display: none;
+            }
+        }
+        &:hover &__icon {
+            filter:  brightness(85%)
+        }
+    
+    }
+    &-avatar {
+        @include size(42px);
+        @include config-border(100%, 2px);
+        @include backgroundImage;
+        
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    &-content {
+    
+    }
+    &-title {
+        font-size: 17px;
+        text-align: center;
+        text-transform: capitalize;
+        color: $black;
+        margin-top: 16px;
+    }
+    &-subtitle {
+        @include text(13px, $black-3);
+        display: block;
+        position: relative;
+        margin-top: -3px;
+
+    }
+
+    & .carousel-btn {
+        top: 35%;
+    }
+
+    &-label {
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $white;
+    
+        background-color: $red;
+        border-radius: 3px;
+    
+        padding: 2px 6px 2px;
+        margin-left: 8px;
+    
+        
+        &--center {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-left: 0px;
+        }
+    
+        &--small {
+            font-size: 6px;
+        }
+    }
+}

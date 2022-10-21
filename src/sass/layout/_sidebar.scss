@@ -2,6 +2,7 @@
 	@include position(fixed, 0, null, 0, $player-height);
 	width: $sidebar-width;
 	background-color: $grey;
+	@include transition(200ms);
 	
 	&-pc {
 		height: 100%;
@@ -118,7 +119,7 @@
 	}
 	
 	&__desc {
-		font-size: 13px;
+		font-size: $xx-smallFontSize;
 		font-weight: 600;
 		text-align: center;
 		color: $white;
@@ -168,98 +169,3 @@
 	}
 }
 
-
-@media screen and (max-width: $mediumBreakpoint) {
-	.sidebar {
-		width: $sidebar-width-on-tablet;
-		@include transition(150ms);
-		z-index: 5;
-
-		&-footer {
-			border-top: unset;
-			padding: 10px 0px;
-		}
-
-		&--open {
-			width: $sidebar-width-on-pc;
-			
-			& .sidebar-tablet {
-				display: none;
-			}
-			
-			& .sidebar-pc {
-				display: flex;
-
-				& .nav-item__title {
-					overflow: hidden;
-					white-space: nowrap;
-				}
-			}
-
-
-		}
-
-		&-pc {
-			display: none;
-			box-shadow: 0px 0px 5px 0px $black-transparent-2;
-
-			& .sidebar-banner {
-				display: none;
-			}
-
-			& .sidebar-button {
-					display: none;
-					&-toggle {
-						display: block;
-						margin-right: 15px;
-					}
-					
-				}
-		}
-
-		&-tablet {
-			@include flex-column;
-			height: 100%;
-
-			& .sidebar-separate {
-				margin-top: 10px;
-			}
-
-			& .nav {
-				padding: unset;
-		
-				&-item {
-					display: block;
-					padding: 15px 0px;
-					text-align: center;
-					border: unset;
-			
-					&__icon {
-						font-size: 20px;
-					}
-				}
-		
-			}
-
-			& .sidebar-button-toggle {
-				display: block;
-			}
-		}
-
-
-	}
-
-	
-
-	.logo {
-		padding: 10px 0px;
-		text-align: center;
-
-		&__img {
-			height: 48px;
-		}
-	}
-
-	
-
-}

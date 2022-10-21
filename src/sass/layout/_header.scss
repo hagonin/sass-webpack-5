@@ -7,6 +7,7 @@
     @include flex-vert;
     padding: 0 40px;
     height: $header-height;
+
 }
 
 
@@ -140,7 +141,7 @@
         border: none;
         cursor: pointer;
 
-        font-size: 10px;
+        font-size: 1rem;
         text-transform: uppercase;
         color: $primary-2;
     }
@@ -213,7 +214,7 @@
     cursor: pointer;
 
     &__icon {
-        font-size: 18px;
+        font-size: 1.8rem;
         color: $black-2;
     }
     &__img {
@@ -224,6 +225,10 @@
         height: 100%;
         border-radius: 100%;
     }
+}
+
+.header > .header-button-item.has-avatar {
+    display: none;
 }
 
 .header-button-item.has-avatar:hover {
@@ -444,15 +449,4 @@
 
 
 
-@media screen and (min-width: $x-largeBreakpoint) {
-    .header {
-        margin-right: $side-playlist-width;
-    }
-}
 
-@media screen and (max-width: $mediumBreakpoint) {
-    .header {
-        left: $sidebar-width-on-tablet;
-    }
-
-}

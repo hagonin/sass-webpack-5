@@ -6,26 +6,64 @@
     background-color: $white;
     border-top: 1px solid $grey;
 
-    display: none;
+    transform: translateY(100%);
+    @include transition(200ms);
 
-    &--open {
-        display: block;
+    
+    &-toggle-btn {
+        @include position(absolute, null, 10px, -45px);
+        @include size(40px);
+        cursor: pointer;
+        background: unset;
+        border: unset;
+        padding: 5px 10px;
+        &__icon {
+            font-size: 3rem;
+            color: $primary-1;
+
+            &--close {
+                display: block;
+            }
+
+            &--open {
+                display: none;
+            }
+        }
+
+        &--open &__icon {
+                &--close {
+                    display: none;
+                }
+    
+                &--open {
+                    display: block;
+                }
+            }
         
     }
 
-    
-    
+    &-progress-on-mobile {
+        @include size(null, 0, $progress-bar-on-mobile);
+		@include position(absolute, 0, 0, calc(-1 * $progress-bar-on-mobile));
+		background-color: $primary-3;
+        display: none;
+    }
+
+    &--open {
+        transform: translateY(0%);
+    }
+
 
     &-audio {
         display: none;
     }
 
     & .player-song {
-        height: $player-height;
+        height: 100%;
     }
 
     &-between {
-        height: 100%;
+        height: $player-height;
         @include flex-horiz(column);
         & .player-progress {
             margin-top: 6px;
@@ -73,7 +111,7 @@
     }
 
     &-controls-with-play &-button {
-        font-size: 16px;
+        font-size: $baseFontSize;
         @include size(32px);
         margin: 0 10px;
 
@@ -94,7 +132,7 @@
         border-radius: 100%;
         background-color: transparent;
 
-        font-size: 13px;
+        font-size: $baseFontSize;
         color: $black;
 
         cursor: pointer;
@@ -111,7 +149,7 @@
             @include size(null, 20px, 16px);
 
             text-transform: uppercase;
-            font-size: 8px;
+            font-size: 0.8rem;
 
             opacity: 0.5;
             margin-right: 13px;
@@ -168,7 +206,7 @@
         &__number {
             @include position(absolute,1px, $top: 7px);
 
-            font-size: 10px;
+            font-size: 1rem;
             line-height: 1;
             display: none;
         }
@@ -177,7 +215,7 @@
     &-progress {
 
         &__time {
-            font-size: 14px;
+            font-size: $x-smallFontSize;
             text-align: center;
             width: 60px;
 
@@ -188,7 +226,7 @@
 
         &__bar {
             appearance: none;
-           @include size(null, 100%, 3px, $max-w: 420px);
+           @include size(null, 420px, 3px, $max-w: 100%);
 
             border-radius: 3px;
             outline: none;
@@ -233,8 +271,11 @@
 
 
 .volume-wrap {
-    & .player-progress__bar {
-        max-width: 70px;
+    & .player-progress__bar { 
+        &-wrap {
+            width: 70px;
+            display: flex;
+        }
     }
 }
 .volume-btn {
@@ -278,12 +319,5 @@
             background-color: $primary-1;
             filter: brightness(85%);
         }
-    }
-}
-
-
-@media screen and (min-width: $x-largeBreakpoint) {
-    .playlist-toggle-btn {
-        display: none;
     }
 }

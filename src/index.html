@@ -10,9 +10,9 @@
 
 <body>
     <div class="app">
-        <div class="sidebar ">
+        <div class="sidebar">
             <div class="sidebar-pc">
-                <a href="" class="logo">
+                <a href="" class="logo hide-on-mobile">
                     <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-light.svg" alt="logo image" class="logo__img">
                 </a>
                 <nav class="nav">
@@ -33,7 +33,7 @@
                         <li class="nav-item has-radio">
                             <i class="nav-item__icon fa-solid fa-radio"></i> 
                             <span class="nav-item__title" title="Radio">Radio</span>
-                            <span class="radio-label">Live</span>
+                            <span class="radio-label hide-on-mobile">Live</span>
                             <i class="nav-item__icon nav-item__icon--play fa-regular fa-circle-play"></i>
                         </li>
                         <li class="nav-item">
@@ -42,8 +42,8 @@
                         </li>
                     </ul>
                 </nav>
-                <span class="sidebar-separate"></span>
-                <div class="sidebar-scrolldown has-scroll">
+                <span class="sidebar-separate hide-on-mobile"></span>
+                <div class="sidebar-scrolldown has-scroll hide-on-mobile">
                     <nav class="nav">
                         <ul class="nav-list">
                             <li class="nav-item">
@@ -78,7 +78,7 @@
                         <a class="btn btn--upgrade">Nâng cấp vip</a>
                     </div>
                 </div>
-                <div class="sidebar-footer">
+                <div class="sidebar-footer hide-on-mobile">
                     <button class="sidebar-button">
                         <i class="sidebar-button__icon fa-solid fa-plus"></i>
                         <span class="sidebar-button__text">
@@ -90,7 +90,7 @@
                     </button>
                 </div>
             </div>
-            <div class="sidebar-tablet">
+            <div class="sidebar-tablet hide-on-mobile">
                 <a href="" class="logo">
                     <img src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.7.42/static/media/icon_zing_mp3_60.f6b51045.svg" alt="logo image" class="logo__img">
                 </a>
@@ -142,7 +142,12 @@
         </div>
         <div class="main">
                 <header class="header">
-                    <div class="header-with-arrow-button">
+                    <div class="header-button-item has-avatar">
+                        <button class="header-button">
+                            <img src="" alt="user" class="header-button__avatar" id="user_icon">
+                        </button>
+                    </div>
+                    <div class="header-with-arrow-button hide-on-mobile">
                         <button class="header-arrow-button" id="backward-btn">
                             <i class="header-arrow-button__icon fa-solid fa-arrow-left"></i>
                         </button>
@@ -212,7 +217,7 @@
                         </span>
                     </div>
     
-                    <div class="header-area-login">
+                    <div class="header-area-login hide-on-mobile">
                         <ul class="header-buttons-list">
                             <li class="header-button-item">
                                 <button class="header-button has-tooltip">
@@ -356,57 +361,44 @@
                     <div class="grid">
                         <!-- Slider -->
                         <section class="section slider">
-                            <button class="slider-button slider-button--previous">
+                            <button class="slider-button slider-button--previous hide-on-mobile">
                                 <i class="slider-button__icon fa-solid fa-chevron-left"></i>
                             </button>
                             <ul class="slide-list">
                                 <li class="slide-item slide-item--left">
                                     <a href="" class="slide-item__link">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/c/5/8/5/c58526b90b413c04efbe8e0f280ab393.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
+                                        <img src="https://photo-zmp3.zmdcdn.me/banner/c/5/8/5/c58526b90b413c04efbe8e0f280ab393.jpg" alt="">
                                     </a>
     
                                 </li>
                                 <li class="slide-item slide-item--center">
                                     <a href="" class="slide-item__link">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/9/2/a/e/92ae3a24cbd6fe24bd81a8db54493d1e.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
+                                        <img src="https://photo-zmp3.zmdcdn.me/banner/9/2/a/e/92ae3a24cbd6fe24bd81a8db54493d1e.jpg" alt="">
                                     </a>
                                     
                                 </li>
                                 <li class="slide-item slide-item--right">
                                     <a href="" class="slide-item__link">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/a/6/4/8/a6480aa703cff5161709dff3353104b3.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
-                                    </a>
-                                    
-                                </li>
-                                <li class="slide-item">
-                                    <a href="" class="slide-item__link" style="background-image: url('');">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/2/0/9/8/2098a76c23d39e3abbf3cde08037b03b.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
+                                        <img src="https://photo-zmp3.zmdcdn.me/banner/a/6/4/8/a6480aa703cff5161709dff3353104b3.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class="slide-item">
-                                    <a href="" class="slide-item__link" style="background-image: url('');">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/2/4/6/5/246548414a31dca9d9fc593831801631.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
+                                    <a href="" class="slide-item__link">
+                                        <img src="https:/photo-zmp3.zmdcdn.me/banner/2/0/9/8/2098a76c23d39e3abbf3cde08037b03b.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class="slide-item">
-                                    <a href="" class="slide-item__link" style="background-image: url('');">
-                                        <div class="slide-item-cover">
-                                            <img src="https://photo-zmp3.zmdcdn.me/banner/d/5/a/b/d5ab72c1edc508a1f74460dd5e2f97fe.jpg" alt="" class="slide-item-cover__img">
-                                        </div>
+                                    <a href="" class="slide-item__link">
+                                        <img src="https://photo-zmp3.zmdcdn.me/banner/2/4/6/5/246548414a31dca9d9fc593831801631.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="slide-item">
+                                    <a href="" class="slide-item__link">
+                                        <img src="https://photo-zmp3.zmdcdn.me/banner/d/5/a/b/d5ab72c1edc508a1f74460dd5e2f97fe.jpg" alt="">
                                     </a>
                                 </li>
                             </ul>
-                            <button class="slider-button slider-button--next">
+                            <button class="slider-button slider-button--next hide-on-mobile">
                                 <i class="slider-button__icon fa-solid fa-chevron-right"></i>
                             </button>
                         </section>
@@ -421,7 +413,7 @@
                                     <div class="tabs-control">
                                         <button class="tab-btn tab-btn--active">Bài hát</button>
                                         <button class="tab-btn">Album</button>
-                                        <a href="" class="section-header-link">Tất cả <i class="section-header-link__icon fa-solid fa-chevron-right"></i></a>
+                                        <a href="" class="section-header-link hide-on-mobile">Tất cả <i class="section-header-link__icon fa-solid fa-chevron-right"></i></a>
                                     </div>
                                     <div class="tabs-list">
                                         <div class="tab-item tab-item--active">
@@ -573,7 +565,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col l-4 m-6 c-12">
-                                                    <div class="media media-- media--vip">
+                                                    <div class="media media--m media--vip">
                                                         <div class="media-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/f/0/3/c/f03c81a860cf67d0e6b461947c794129.jpg" alt="Cover" class="media-cover__img">
                                                             <button class="media-play-btn">
@@ -602,7 +594,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col l-4 m-6 c-12">
-                                                    <div class="media media-- media--vip">
+                                                    <div class="media media--m media--vip">
                                                         <div class="media-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/5/7/5/e/575e6664486827d431cf8dce47312ee3.jpg" alt="Cover" class="media-cover__img">
                                                             <button class="media-play-btn">
@@ -660,7 +652,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col l-4 m-6 c-12">
+                                                <div class="col l-4 m-0 c-12">
                                                     <div class="media media--m">
                                                         <div class="media-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/d/f/8/7/df87f64e7ede2f81e9adb61ce03129af.jpg" alt="Cover" class="media-cover__img">
@@ -976,8 +968,8 @@
                                 <h2 class="section-header__heading">Cuối tuần lên nhạc</h2>
                             </header>
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-2-4 m-3 c-6">
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Cà Phê Cùng Bạn Bè">
@@ -1018,7 +1010,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Nhạc Cho Thứ Bảy">
@@ -1058,7 +1050,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Những Sự Kết Hợp Mới">
@@ -1099,7 +1091,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Everyday EDM">
@@ -1139,7 +1131,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-0 c-0">
+                                    <div class="col l-2-4 m-0 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Cà Phê Cùng Bạn Bè">
@@ -1189,8 +1181,8 @@
                                 <h2 class="section-header__heading">Nghệ sĩ yêu thích</h2>
                             </header>
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-2-4 m-3 c-6">
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card card--artist">
                                             <a class="card-cover-link" href=""  title="Góc Nhạc Mr Siro">
                                                 <div class="card-cover">
@@ -1224,7 +1216,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card card--artist">
                                             <a class="card-cover-link" href=""  title="Góc Nhạc OnLyC">
                                                 <div class="card-cover">
@@ -1238,8 +1230,6 @@
                                                     <div class="card-overlay"></div>
                                                     <div class="card-content">
                                                         <h2 class="card-content__name">OnlyC</h2>
-                                                        <div class="card-content-imgs">
-                                                        </div>
                                                         <div class="card-content-imgs">
                                                             <div class="card-img">
                                                                 <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/7/1/a/d/71adfd9bf22ced6fbe5f36806fd2d030.jpg" alt="">
@@ -1257,7 +1247,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card card--artist">
                                             <a class="card-cover-link" href=""  title="Góc Nhạc Chi Dân">
                                                 <div class="card-cover">
@@ -1288,7 +1278,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card card--artist">
                                             <a class="card-cover-link" href=""  title="Góc Nhạc Mr Siro">
                                                 <div class="card-cover">
@@ -1319,7 +1309,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-0 c-0">
+                                    <div class="col l-2-4 m-0 c-40">
                                         <div class="card card--artist">
                                             <a class="card-cover-link" href=""  title="Góc Nhạc OnLyC">
                                                 <div class="card-cover">
@@ -1361,8 +1351,8 @@
                                 <h2 class="section-header__heading">Cuối tuần lên nhạc</h2>
                             </header>
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-2-4 m-3 c-6">
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="V-Pop Tháng 9/2022">
@@ -1404,7 +1394,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="V-Pop Tháng 9/2022">
@@ -1447,7 +1437,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="K-Pop Tháng 9/2022">
@@ -1490,7 +1480,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="V-Pop Tháng 9/2022">
@@ -1532,7 +1522,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-0 c-0">
+                                    <div class="col l-2-4 m-0 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="V-Pop Tháng 9/2022">
@@ -1592,7 +1582,7 @@
                                 </header>
                                 <div class="zingchart-body">
                                     <div class="row revert">
-                                        <div class="col l-5 m-12">
+                                        <div class="col l-5 m-12 c-12">
                                             <div class="zingchart-list">
                                                 <div class="media media--m zingchart-item zingchart-item--first">
                                                     <span class="media__index">1</span>
@@ -1666,7 +1656,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col l-7 m-12">
+                                        <div class="col l-7 m-12 c-12">
                                             <div class="zingchart-chart">
                                                 <canvas id="zingchart"></canvas>
                                             </div>
@@ -1679,18 +1669,18 @@
                         <!-- banner -->
                         <section class="section">
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-4 m-4"> 
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-4 m-4 c-90"> 
                                         <a class="banner" href="">
                                             <div class="banner__img" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/song-vn-2x.jpg');"></div>
                                         </a>
                                     </div>
-                                    <div class="col l-4 m-4">
+                                    <div class="col l-4 m-4 c-90">
                                         <a class="banner" href="">
                                             <div class="banner__img" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_usuk.jpg');"></div>
                                         </a>
                                     </div>
-                                    <div class="col l-4 m-4">
+                                    <div class="col l-4 m-4 c-90">
                                         <a class="banner" href="">
                                             <div class="banner__img" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_kpop.jpg');"></div>
                                         </a>
@@ -1706,80 +1696,80 @@
                                     <button class="carousel-btn carousel-btn--left carousel-btn--disabled">
                                         <i class="carousel-btn__icon fa-solid fa-angle-left"></i>
                                     </button>
-                                    <div class="carousel-list">
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                    <div class="row touch-on-mobile carousel-list">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/huong-ly.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/huong-ly.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/hoa-minzy.png');"></a>
                                                 </div>
                                             </div>
             
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
             
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/mr-siro.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/erik.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/onlyc.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/hoa-minzy.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/mr-siro.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/erik.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/onlyc.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/mr-siro.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/erik.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/onlyc.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/erik.png');"></a>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="top-artist">
                                                     <a href="" class="top-artist__link" style="background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/zma-2021/imgs/onlyc.png');"></a>
                                                 </div>
@@ -1801,8 +1791,8 @@
                                 <h2 class="section-header__heading">Top 100</h2>
                             </header>
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-2-4 m-3 c-6">
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Top 100 Bài Hát Nhạc Trẻ Hay Nhất">
@@ -1847,7 +1837,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Top 100 Pop Âu Mỹ Hay Nhất">
@@ -1891,7 +1881,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Top 100 Nhạc Electronic/Dance Âu Mỹ Trẻ Hay Nhất">
@@ -1935,7 +1925,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Top 100 Nhạc Trữ Tình Hay Nhất">
@@ -1979,7 +1969,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col l-2-4 m-0 c-0">
+                                    <div class="col l-2-4 m-0 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Top 100 Nhạc Hàn Quốc Hay Nhất">
@@ -2036,8 +2026,8 @@
                                 <div class="new-song-list">
                                     <div class="carousel-wrap" id="top-new-song-release">
                                         <div class="carousel" >
-                                            <div class="carousel-list" >
-                                                <div class="carousel-item carousel-item--col-3">
+                                            <div class="row touch-on-mobile carousel-list">
+                                                <div class="col l-4 m-6 c-90 carousel-item">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/1/5/8/7/1587cfbc46ea31fd82cd5bd2c81e2215.jpg" alt="" class="new-song-cover__img">
@@ -2062,7 +2052,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/4/a/a/1/4aa1e72a35a1b933c84afb2c9cb736c1.jpg" alt="" class="new-song-cover__img">
@@ -2086,7 +2076,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/1/9/7/1/1971ce77b6ece212760349d84678470f.jpg" alt="" class="new-song-cover__img">
@@ -2109,7 +2099,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/4/9/6/f/496fa84f1a008e3fa51668545deb33ca.jpg" alt="" class="new-song-cover__img">
@@ -2133,7 +2123,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/1/5/8/7/1587cfbc46ea31fd82cd5bd2c81e2215.jpg" alt="" class="new-song-cover__img">
@@ -2158,7 +2148,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/4/a/a/1/4aa1e72a35a1b933c84afb2c9cb736c1.jpg" alt="" class="new-song-cover__img">
@@ -2182,7 +2172,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/1/9/7/1/1971ce77b6ece212760349d84678470f.jpg" alt="" class="new-song-cover__img">
@@ -2205,7 +2195,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-cover">
                                                             <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/4/9/6/f/496fa84f1a008e3fa51668545deb33ca.jpg" alt="" class="new-song-cover__img">
@@ -2229,7 +2219,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item carousel-item--col-3">
+                                                <div class="carousel-item col l-4 m-6 c-90">
                                                     <div class="new-song">
                                                         <div class="new-song-content">
                                                             <a href="" class="new-song-link">Xem thêm</a>
@@ -2243,8 +2233,8 @@
                                 </div>
                                 <div class="carousel-wrap" id="new-song-release">
                                     <div class="carousel" >
-                                        <div class="carousel-list" >
-                                            <div class="carousel-item carousel-item--col-2">
+                                        <div class="row touch-on-mobile  carousel-list" >
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="X (EP)">
@@ -2283,7 +2273,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="New Wave (EP)">
@@ -2322,7 +2312,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="X (EP)">
@@ -2361,7 +2351,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="New Wave (EP)">
@@ -2400,7 +2390,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="X (EP)">
@@ -2439,7 +2429,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Đò Xa Bến">
@@ -2478,7 +2468,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Tình Ta Ngược Lối">
@@ -2517,7 +2507,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Đò Xa Bến">
@@ -2556,7 +2546,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Tình Ta Ngược Lối">
@@ -2595,7 +2585,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Đò Xa Bến">
@@ -2634,7 +2624,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="X (EP)">
@@ -2673,7 +2663,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="New Wave (EP)">
@@ -2712,7 +2702,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="X (EP)">
@@ -2751,7 +2741,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Tình Ta Ngược Lối">
@@ -2790,7 +2780,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-2">
+                                            <div class="carousel-item col l-1-7 m-3 c-40">
                                                 <div class="card">
                                                     <a class="card-cover-link" href="">
                                                         <div class="card-cover" title="Đò Xa Bến">
@@ -2843,8 +2833,8 @@
                                 <a href="" class="section-header-link">Tất cả <i class="section-header-link__icon fa-solid fa-chevron-right"></i></a>
                             </header>
                             <div class="section-body">
-                                <div class="row">
-                                    <div class="col l-2-4 m-3 c-6">
+                                <div class="row touch-on-mobile">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="2022 Hot Songs">
@@ -2884,7 +2874,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="2022 Trending">
@@ -2924,7 +2914,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Mondy Movitation">
@@ -2964,7 +2954,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-3 c-6">
+                                    <div class="col l-2-4 m-3 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="EDM Back to work">
@@ -3004,7 +2994,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col l-2-4 m-0 c-0">
+                                    <div class="col l-2-4 m-0 c-40">
                                         <div class="card">
                                             <a class="card-cover-link" href="">
                                                 <div class="card-cover" title="Morning Jazz">
@@ -3060,8 +3050,8 @@
                                         <button class="carousel-btn carousel-btn--left carousel-btn--disabled" id="">
                                             <i class="carousel-btn__icon fa-solid fa-angle-left"></i>
                                         </button>
-                                        <div class="carousel-list">
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                        <div class="row touch-on-mobile carousel-list">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item radio--live">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3082,7 +3072,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3103,7 +3093,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item radio--live">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3124,7 +3114,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item radio--live">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3145,7 +3135,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3166,7 +3156,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3187,7 +3177,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3208,7 +3198,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item radio--live">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3229,7 +3219,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3250,7 +3240,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-1-4">
+                                            <div class="carousel-item col l-1-7 m-2-4 c-40">
                                                 <div class="radio-item">
                                                     <div class="radio-cover">
                                                         <div class="radio-cover-inner">
@@ -3292,8 +3282,8 @@
                                         <button class="carousel-btn carousel-btn--right"><i class="carousel-btn__icon fa-solid fa-chevron-right"></i></button>
                                     </header>
                                     <div class="carousel">
-                                        <div class="carousel-list">
-                                            <div class="carousel-item carousel-item--col-3">
+                                        <div class="row touch-on-mobile carousel-list">
+                                            <div class="carousel-item col l-4 m-6 c-95">
                                                 <div class="event-item">
                                                     <div class="event-cover">
                                                         <img src="https://photo-resize-zmp3.zmdcdn.me/w600_r12x7_webp/event/0/b/6/6/0b66568c2650d6c013742e05e37bffc5.jpg" alt="event image" class="event-cover__img">
@@ -3324,7 +3314,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-3">
+                                            <div class="carousel-item col l-4 m-6 c-95">
                                                 <div class="event-item">
                                                     <div class="event-cover">
                                                         <img src="https://photo-resize-zmp3.zmdcdn.me/w600_r12x7_webp/event/0/e/0/6/0e0648f4533bcda99060c7ea4a2082c5.jpg" alt="event image" class="event-cover__img">
@@ -3355,7 +3345,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-3">
+                                            <div class="carousel-item col l-4 m-6 c-95">
                                                 <div class="event-item">
                                                     <div class="event-cover">
                                                         <img src="https://photo-resize-zmp3.zmdcdn.me/w600_r12x7_webp/event/5/a/6/a/5a6a43ae6fa55fba42957b445fb656c5.jpg" alt="event image" class="event-cover__img">
@@ -3386,7 +3376,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item carousel-item--col-3">
+                                            <div class="carousel-item col l-4 m-6 c-95">
                                                 <div class="event-item">
                                                     <div class="event-cover">
                                                         <img src="https://photo-resize-zmp3.zmdcdn.me/w600_r12x7_webp/event/b/5/c/5/b5c52da032b433efa0d08355b1427323.jpg" alt="event image" class="event-cover__img">
@@ -3429,52 +3419,52 @@
                     <h3 class="footer__heading">đối tác âm nhạc</h3>
                     <div class="partner">
                         <div class="row small-gutter center">
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/orcahrd.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/Kakao-M.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/yg.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/universal-1.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/FUGA.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/sony.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/empire.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/beggers.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 l-o-1-5-3 m-3 m-o-3 c-4">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/monstercat.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
                             </div>
-                            <div class="col l-12-5">
+                            <div class="col l-1-5 m-3 m-o-0 c-4 c-o-4 ">
                                 <div class="partner-logo">
                                     <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/SM-Entertainment.png" alt="partner__logo" class="partner-logo__img">
                                 </div>
@@ -3685,18 +3675,22 @@
     
                     
                 </div>
+
+                
         </div>
 
+
+        <!-- Player -->
         <div class="player player--open" id="player">
             <div class="row">
-                <div class="col l-3">
+                <div class="col l-3 m-4 c-9">
                     <div class="player-song"></div>
                 </div>
-                <div class="col l-6">
+                <div class="col l-6 m-4 c-3">
                     <div class="player-between">
                         <div class="player-controls">
                             <!-- shuffle-btn--act -->
-                            <button class="player-button has-tooltip shuffle-btn shuffle-btn--act">
+                            <button class="player-button has-tooltip shuffle-btn shuffle-btn--act hide-on-mobile">
                                 <i class="player-button__icon fa-solid fa-shuffle"></i>
                                 <span class="tooltip tooltip--above">
                                     <span class="tooltip__content">
@@ -3704,7 +3698,7 @@
                                     </span>
                                 </span>
                             </button>
-                            <button class="player-button has-tooltip play-btn--disabled" id="btn-pre-song">
+                            <button class="player-button has-tooltip play-btn--disabled hide-on-mobile" id="btn-pre-song">
                                 <i class="player-button__icon fa-solid fa-backward-step"></i>
                                 <span class="tooltip tooltip--above">
                                     <span class="tooltip__content">
@@ -3724,7 +3718,7 @@
                                     </span>
                                 </span>
                             </button>
-                            <button class="player-button has-tooltip repeat-btn">
+                            <button class="player-button has-tooltip repeat-btn hide-on-mobile">
                                 <sup class="player-button__number">1</sup>
                                 <i class="player-button__icon fa-solid fa-repeat"></i>
                                 <span class="tooltip tooltip--above">
@@ -3734,17 +3728,16 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="player-progress">
+                        <div class="player-progress hide-on-mobile">
                             <span class="player-progress__time current-time" id="current-time">0:00</span>
                             <input type="range" name="" class="player-progress__bar" value="0" max="100" step="1" id="progress-song">
                             <audio src="" class="player-audio"></audio>
                             <span class="player-progress__time" id="duration">0:00</span>
-                            
                         </div>
                         
                     </div>
                 </div>
-                <div class="col l-3">
+                <div class="col l-3 m-4 c-0">
                     <div class="player-right">
                         <div class="player-controls">
                             <button class="player-button has-mv">
@@ -3771,7 +3764,9 @@
                                     <i class="player-button__icon player-button__icon--unmute fa-solid fa-volume-high"></i>
                                     <i class="player-button__icon player-button__icon--mute fa-solid fa-volume-xmark"></i>
                                 </button>
-                                <input type="range" name="" class="player-progress__bar" value=100 min="0" max=100 step=1 id="progress-volume">
+                                <div class="player-progress__bar-wrap">
+                                    <input type="range" name="" class="player-progress__bar" value=100 min="0" max=100 step=1 id="progress-volume">
+                                </div>
                             </div>
                             <span class="player-separate"></span>
                             <button class="player-button playlist-toggle-btn has-tooltip ">
@@ -3785,9 +3780,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="player-progress-on-mobile"></div>
             </div>
-            
-            
+
+            <button class="player-toggle-btn   hide-on-mobile">
+                <i class="player-toggle-btn__icon player-toggle-btn__icon--close fa-solid fa-angles-down"></i>
+                <i class="player-toggle-btn__icon player-toggle-btn__icon--open fa-solid fa-angles-up"></i>
+            </button>
             
         </div>
 

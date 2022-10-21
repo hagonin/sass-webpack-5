@@ -35,9 +35,9 @@ btnPrevious.onclick = () => {
 	addSlidesCurrent(increaseIndex, leftIndex, centerIndex);
 };
 
-setInterval(function () {
-	btnNext.click();
-}, 6000);
+// setInterval(function () {
+// 	btnNext.click();
+// }, 6000);
 
 
 function getCurrentSlideIndex() {
@@ -101,12 +101,22 @@ topRadioCarousel.handleBtnEvent();
 
 const eventCarousel = carousel($('#events'));
 eventCarousel.handleBtnEvent();
+let intCarousel;
+addEventListener('resize', resetIntCarousel);
+addEventListener('load', resetIntCarousel);
+function resetIntCarousel() {
+	intCarousel ? clearInterval(intCarousel) : false;
+ 	const w = window.innerWidth;
+	if (w > 740) {
+		intCarousel = setInterval(() => {
+			newSongCarousel.handleCarouselNext();
+			newSongCarousel2.handleCarouselNext();
+			topArtistCarousel.handleCarouselNext();
+		}, 5000);
+	} 
 
-setInterval(() => {
-	newSongCarousel.handleCarouselNext();
-	newSongCarousel2.handleCarouselNext();
-	topArtistCarousel.handleCarouselNext();
-}, 5000);
+}
+
 
 
 //**************** Handle Player **************** */
@@ -138,14 +148,17 @@ btnFavorites.forEach( btn => {
 //**************** Handle Playlist **************** */
 const btnTogglePlayList = $('.playlist-toggle-btn');
 const sidePlayList = $('.side-playlist');
+let isPlayListOpen = sidePlayList.classList.contains('side-playlist--open');
 
 btnTogglePlayList.onclick = function() {
-	sidePlayList.classList.toggle('side-playlist--open');
-	this.classList.toggle('playlist-toggle-btn--active');
+	isPlayListOpen = !isPlayListOpen;
+	sidePlayList.classList.toggle('side-playlist--open', isPlayListOpen);
+	this.classList.toggle('playlist-toggle-btn--active', isPlayListOpen);
 }
 
 
 const btnSwitchPlayList = $$('.playlist-switch-btn');
+console.log(btnSwitchPlayList);
 const containerPlaylist = $$('.playlist-container');
 btnSwitchPlayList.forEach( (btn, index) => {
 	btn.onclick = function() {
@@ -158,8 +171,7 @@ btnSwitchPlayList.forEach( (btn, index) => {
 })
 
 
-
-// sidebar toggle
+//**************** Handle sidebar toggle on tablet **************** */
 const sidebar = $('.sidebar');
 const btnOpenSidebar = $('#btn-open-sidebar');
 const btnCloseSidebar = $('#btn-close-sidebar');
@@ -171,3 +183,22 @@ btnOpenSidebar.onclick = () => {
 btnCloseSidebar.onclick = () => {
 	sidebar.classList.remove('sidebar--open');
 }
+
+
+
+//**************** Handle sidebar player toggle btn **************** */
+const player = $('.player');
+const btnTogglePlayer = $('.player-toggle-btn');
+let isPlayerOpen = player.classList.contains('player--open');
+btnTogglePlayer.onclick = () => {
+    isPlayerOpen = !isPlayerOpen;
+	player.classList.toggle('player--open', isPlayerOpen);
+    btnTogglePlayer.classList.toggle('player-toggle-btn--open', !isPlayerOpen);
+    
+    $('.sidebar').style.bottom = isPlayerOpen ? '90px': '0px';
+
+	if (!isPlayerOpen) {
+		isPlayListOpen ? btnTogglePlayList.click(): false;
+	}
+}
+

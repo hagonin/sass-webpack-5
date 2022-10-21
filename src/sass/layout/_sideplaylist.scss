@@ -12,17 +12,14 @@
     &--open {
         transform: translateX(0%);
     }
+
 }
 
 
-@media (min-width : $x-largeBreakpoint) {
-    .side-playlist {
-        transform: translateX(0%);
-    }
-}
 
 .playlist {
     @include flex-column;
+    position: relative;
     &-header {
         &-wrap {
             padding: 18px 8px;
@@ -50,7 +47,7 @@
 
 
         &-btn {
-            font-size: 13px;
+            font-size: $xx-smallFontSize;
 
             height: 100%;
             padding: 0px 15px;
@@ -93,6 +90,8 @@
         overflow: auto;
     }
 
+
+    
     
 
 }

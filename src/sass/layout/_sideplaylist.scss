@@ -11,6 +11,16 @@
 
     &--open {
         transform: translateX(0%);
+
+        @media screen and (max-width: $smallBreakpoint) {
+            z-index: 40;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $smallBreakpoint) {
+        transition: unset;
     }
 
 }
@@ -20,6 +30,8 @@
 .playlist {
     @include flex-column;
     position: relative;
+
+    
     &-header {
         &-wrap {
             padding: 18px 8px;
@@ -29,6 +41,7 @@
         top: 0;
         @include flex-custom($justify: space-between);
 
+       
     }
 
 
@@ -58,7 +71,9 @@
 
             cursor: pointer;
 
-
+            @media screen and (max-width: $x-smallBreakpoint)  {
+                font-size: 1.1rem;
+            }
             &--active {
                 background-color: $white;
                 color: $primary-4;
@@ -81,6 +96,16 @@
         &__icon {
 
         }
+
+        &#btn-close-side-playlist {
+            display: none;
+
+            @media screen and (max-width: $smallBreakpoint) {
+                display: block;
+                font-size: 2.4rem;
+                background: unset;
+            }
+        }
     }
 
     &-body {
@@ -91,7 +116,42 @@
     }
 
 
-    
+    &__desc {
+        font-size: $baseFontSize;
+        margin: 0 0;
+    }
+    &-current .media {
+        &.playing {
+            & .media-play-btn {
+                &__icon {
+                    &--play {
+                        display: block;
+                    }
+                    &--pause {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        
+
+        & .media__title, & .media__subtitle {
+            color: $white;
+        }
+
+        & .media-play-btn {
+            display: flex;
+            &__icon {
+                &--play {
+                    display: none;
+                }
+                &--pause {
+                    display: block;
+                }
+            }
+        }
+    }
     
 
 }
@@ -119,6 +179,10 @@
 
     & .media {
         margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: $smallBreakpoint) {
+        margin-bottom: 75px;
     }
 }
 

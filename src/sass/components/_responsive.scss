@@ -93,36 +93,11 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+
+	.side-playlist {
+		width: $side-playlist-width-on-tablet;
+	}
     
-    .slider {
-        padding-top: 25%;
-    }
-    .slide {
-        &-item {
-            width: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            padding-top: 25%;
-            
-            &--right {
-                opacity: 0;
-                visibility: hidden;
-                z-index: -1;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            &--left {
-                left: 0;
-                transform: translateX(0%);
-            }
-
-            &--center {
-                left: 100%;
-                transform: translateX(-100%);
-            }
-        }
-    }
 
 	.sidebar {
 		width: $sidebar-width-on-tablet;
@@ -204,6 +179,13 @@
 	}
 }
 
+// SMALL TABLET
+@media screen and (max-width: $smallBreakpoint) and (min-width: $small-tablet) {
+	.player-mobile .player-cd {
+		width: 70%;
+		padding-top: 70%;
+	}
+}
 
 // MOBILE
 @media screen  and (max-width: 739px) {
@@ -220,52 +202,7 @@
 		padding-right: 10px;
 	}
 
-    .slider {
-        padding-top: unset;
-		position: unset;
-		&:hover .slider-button {
-			display: none;
-		}
-    }
 
-    .slide {
-        &-item {
-            transform: unset;
-			position: relative;
-			flex-shrink: 0;
-			opacity: unset;
-			visibility: visible;
-
-            width: 100%;
-            padding-top: 50%;
-			left: unset;
-            
-            &--right, &--left, &--center {
-                transform: unset;
-				left: unset;
-            }
-
-			&__link {
-				left: 0;
-				@include size(100%);
-			}
-
-        }
-
-		&-item + &-item {
-			margin-left: 20px;
-		}
-
-		&-list {
-			width: 100%;
-			position: unset;
-			display: flex;
-			overflow-x: auto;
-			overflow-y: hidden;
-			margin: 0 auto
-			
-		}
-    }
 
 	.sidebar {
 		@include position(fixed, 0, 0, unset, 0, 10);
@@ -274,6 +211,10 @@
 		border-top: 1px solid $grey;
 
 		
+	}
+
+	.slide-btn {
+		display: block;
 	}
 
 	.nav {
@@ -306,12 +247,6 @@
 					font-weight: 700;
 				}
 			}
-
-			&:hover {
-				color: $black-1;
-			}
-
-			
 
 			&__icon--play {
 				display: none!important;
@@ -405,17 +340,11 @@
 		border-radius: 20px;
 	}
 
-
-	.slide-item__link {
-		margin: 0px;
-	}
-
 	.card-control-btn + .card-control-btn {
 		margin-left: 3px;
 	}
 
 
-	.media:hover .media-play-btn,
 	.card-cover-link:hover .card-controls {
 		display: none;
 	}
@@ -452,6 +381,8 @@
 		top: $header-height;
 		height: 100%;
 	}
+
+	
 }
 
 
@@ -467,6 +398,15 @@
 			font-size: 1.5rem;
 		}
 	}
-	
+
+	.player-mobile .player-button.play-btn {
+		@include size(45px);
+
+		& .player-button__icon {
+			font-size: 2rem;
+		}
+	}
+
 	
 }
+

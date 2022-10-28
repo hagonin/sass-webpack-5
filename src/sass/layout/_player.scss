@@ -9,12 +9,155 @@
     transform: translateY(100%);
     @include transition(200ms);
 
-    
+
+    &-mobile {
+        @include position(absolute, 0, 0, 0, 0);
+        background-color: $white;
+        padding: 10px 15px;
+
+
+
+        & .player {
+            position: unset;
+            transform: unset;
+            border-top: unset;
+
+            &-header {
+                @include flex-custom($justify: space-between, $align: baseline);
+            }
+
+            &-btn {
+                background: unset;
+                border: unset;
+                padding: 10px 0px;
+                width: 40px;
+                
+                &__icon {
+                    font-size: 2rem;
+                }
+
+            }
+
+            &-content {
+                text-align: center; 
+                text-transform: capitalize;
+                flex: 1;
+            }
+
+            &__title {
+                font-size: 1.8rem;
+                @include limitText(30px, 1);
+            }
+
+            &__subtitle {
+                font-size: $baseFontSize;
+                @include limitText(30px, 1);
+            }
+
+            &-switch {
+                text-align: center;
+                margin: 10px 0px 30px;
+                
+                &__dot {
+                    @include size(5px);
+                    display: inline-block;
+                    border-radius: 100%;
+                    background-color: $grey;
+                    &--active {
+                        background-color: $primary;
+                    }
+
+                    
+                }
+
+                
+            }
+
+            &-cd {
+                width: 100%;
+                padding-top: 100%;
+                position: relative;
+                margin:  auto;
+
+                
+
+                &-inner {
+                    @include position(absolute, 0, $top: 0);
+                    @include size;
+                    border-radius: 100%;
+
+                }
+
+                &__img {
+                    @include size;
+                    border-radius: 100%;
+                }
+            }
+
+            &-progress {
+                margin: 20px 0px 20px;
+
+                & .player-progress__time {
+                    margin: 0 5px;
+                    font-size: $baseFontSize;
+                }
+            }
+
+            &-controls {
+                justify-content: space-between;
+                margin-bottom: 40px;
+
+                &--last {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+
+                    & .player-button.playlist-toggle-btn {
+                        margin: auto;
+                    }
+                }
+            }
+
+            &-button {
+                &.play-btn {
+                    @include size(60px);
+                    border: 2px solid $black-1;
+
+                    & .player-button__icon {
+                        font-size: 2.6rem;
+                    }
+                }
+
+                &.lyric-btn {
+                    margin-right: auto
+                }
+
+                &.playlist-toggle-btn {
+                    width: auto;
+                    margin-right: 0px;
+                }
+
+                &__text {
+                    margin-left: 10px;
+                    font-size: 1.8rem;
+                }
+            }
+
+            &-progress {
+                &__bar {
+                }
+            }
+        }
+    }
+
+
+
     &-toggle-btn {
         @include position(absolute, null, 10px, -45px);
         @include size(40px);
         cursor: pointer;
-        background: unset;
+        background-color: unset;
         border: unset;
         padding: 5px 10px;
         &__icon {
@@ -320,4 +463,6 @@
             filter: brightness(85%);
         }
     }
+
+    
 }

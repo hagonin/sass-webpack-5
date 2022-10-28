@@ -3,16 +3,16 @@
     align-items: center;
     padding: 10px 10px;
     border-radius: 4px;
-    
-    &--active, &--active-primary {
+
+    &--active {
         & .media-play-btn {
             display: flex;
             &__icon {
                 &--play {
-                    display: none;
+                    display: block;
                 }
                 &--pause {
-                    display: block;
+                    display: none;
                 }
             }
         }
@@ -90,6 +90,8 @@
         opacity: 0.5;
     }
 
+    
+
     &--cd {
         & .media-cover {
             @include size(87px);
@@ -113,6 +115,19 @@
         border-radius: 4px;
         transition: all linear 300ms;
 
+        &__index {
+            font-size: 2rem;
+            color: purple;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         // &--small {
         //     @include size(40px);
         // }
@@ -217,7 +232,10 @@
         display: flex;
     }
 
-    &:hover &-options,
+    &:hover &-options {
+        @include flex-custom;
+    }
+
     &:hover &-favorite-btn {
         display: block;
     } 
@@ -242,12 +260,13 @@
         flex: 1;
         min-width: 0;
         margin-right: 20px;
+        @include flex-column;
 
         &-header {
             display: flex;
             align-items: center;
         }
-        
+
     }
 
     
@@ -265,6 +284,10 @@
 
     &__title, &-list-subtitle,&__subtitle {
         @include limitText(21px, 1);
+    }
+
+    &-list-subtitle {
+        display: flex;
     }
 
     &-list-subtitle, &__subtitle {
@@ -286,13 +309,12 @@
     }
 
     &-options {
-        height: 40px;
-        width: 40px;
+       @include size(40px);
         
         background-color: transparent;
         border-radius: 100%;
         
-        line-height: 37px;
+        line-height: 40px;
         text-align: center;
         
         margin-left: auto;
@@ -303,7 +325,28 @@
         &__icon {
             font-size: $media-FontSize;
             color: $black-2;
+
+            &--vert {
+                display: none;
+
+                @media screen and (max-width: $smallBreakpoint) {
+                    display: block;
+                }
+
+            }
+
+            &--hori {
+                display: block;
+
+                @media screen and (max-width: $smallBreakpoint) {
+                    display: none;
+                }
+            }
+
+            
         }
+
+
         
         &:hover {
             background-color: $grey-transparent-5;
@@ -359,6 +402,8 @@
         background: none;
         cursor: pointer;
 
+        font-size: $baseFontSize;
+        
         & .media-favorite-btn__icon--love {
             display: none;
         }
